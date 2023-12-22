@@ -16,19 +16,19 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: Scaffold(
+        backgroundColor: Colors.white,
         appBar: AppBar(
-          backgroundColor: Colors.blue,
-          title: Text('top_10_widgets'),
+          backgroundColor: Colors.teal,
+          title: const Text('top_10_widgets'),
         ),
-        body: const Column(
+        body: Column(
           children: [
-            ListTile(
-              leading: Icon(Icons.account_circle),
-              title: Text('Contact',style: TextStyle(fontSize: 20),),
-              subtitle: Text('Enter your Number',style: TextStyle(fontSize: 10),),
-            )
+
+
+
           ],
-        ),
+        )
+        ,
       ),
     );
   }
@@ -36,51 +36,85 @@ class MyApp extends StatelessWidget {
 
 // (TextFormField / RichText / Text / ) => login UI source code:
 
-// Column(
-// mainAxisAlignment: MainAxisAlignment.center,
-// children: [
-// Padding(
-// padding: const EdgeInsets.symmetric(horizontal: 30),
-// child: TextFormField(
-// style: const TextStyle(fontSize: 18, color: Colors.black),
-// decoration: const InputDecoration(
-// labelText: 'Email',
-// hintText: 'Email',
-// hintStyle: TextStyle(fontSize: 14, color: Colors.blue),
-// ),
-// ),
-// ),
-// const SizedBox(
-// height: 20,
-// ),
-// Padding(
-// padding: const EdgeInsets.symmetric(horizontal: 30),
-// child: TextFormField(
-// style: const TextStyle(fontSize: 18, color: Colors.black),
-// decoration: const InputDecoration(
-// labelText: 'Password',
-// hintText: 'Password',
-// hintStyle: TextStyle(fontSize: 14, color: Colors.blue),
-// ),
-// ),
-// ),
-// const SizedBox(
-// height: 20,
-// ),
-// RichText(
-// text: TextSpan(
-// text: "Don't have in account? ",
-// style: Theme.of(context).textTheme.bodyText1,
-// children: const [
-// TextSpan(
-// text: 'Sign Up',
-// style: TextStyle(
-// decoration: (TextDecoration.underline),
-// fontSize: 17,
-// fontWeight: FontWeight.bold))
-// ]))
-// ],
-// ),
+//          Column(
+//           mainAxisAlignment: MainAxisAlignment.center,
+//           children: [
+//             Center(
+//               child: Text(
+//                 'Log In',
+//                 style: TextStyle(
+//                   fontSize: 30,
+//                   fontWeight: FontWeight.bold,
+//                   color: Colors.black
+//                 ),
+//               ),
+//             ),
+//             SizedBox(
+//               height: 20,
+//             ),
+//             Padding(
+//               padding: EdgeInsets.symmetric(horizontal: 30),
+//               child: TextFormField(
+//                 keyboardType: TextInputType.emailAddress,
+//                 style: TextStyle(fontSize: 18, color: Colors.black),
+//                 decoration: InputDecoration(
+//                     // labelText: 'Email',
+//                     hintText: 'Email',
+//                     prefixIcon: Icon(Icons.alternate_email),
+//                     hintStyle:
+//                         TextStyle(fontSize: 14, color: Colors.grey.shade700),
+//                     enabledBorder: OutlineInputBorder(
+//                       borderSide: BorderSide(color: Colors.red,width: 2),
+//                         borderRadius: BorderRadius.circular(30)),
+//                     focusedBorder: OutlineInputBorder(
+//                         borderSide: BorderSide(color: Colors.green,width: 2),
+//                         borderRadius: BorderRadius.circular(30))),
+//               ),
+//             ),
+//             const SizedBox(
+//               height: 20,
+//             ),
+//             Padding(
+//               padding: const EdgeInsets.symmetric(horizontal: 30),
+//               child: TextFormField(
+//                 cursorColor: Colors.black,
+//                 enabled: true,
+//                 keyboardType: TextInputType.visiblePassword,
+//                 style: const TextStyle(fontSize: 18, color: Colors.black),
+//                 decoration: InputDecoration(
+//                     // labelText: 'Password',
+//                     prefixIcon: Icon(Icons.lock),
+//                     hintText: 'Password',
+//                     hintStyle:
+//                         TextStyle(fontSize: 14, color: Colors.grey.shade700),
+//                     enabledBorder: OutlineInputBorder(
+//                         borderSide: BorderSide(color: Colors.red,width: 2),
+//                         borderRadius: BorderRadius.circular(30)),
+//                     focusedBorder: OutlineInputBorder(
+//                         borderSide: BorderSide(color: Colors.green,width: 2),
+//                         borderRadius: BorderRadius.circular(30))),
+//                 // onChanged: (value){
+//                 //   print(value);
+//                 // },
+//               ),
+//             ),
+//             const SizedBox(
+//               height: 20,
+//             ),
+//             RichText(
+//                 text: TextSpan(
+//                     text: "Don't have in account? ",
+//                     style: Theme.of(context).textTheme.bodyText1,
+//                     children: const [
+//                   TextSpan(
+//                       text: 'Sign Up',
+//                       style: TextStyle(
+//                           decoration: (TextDecoration.underline),
+//                           fontSize: 17,
+//                           fontWeight: FontWeight.bold))
+//                 ]))
+//           ],
+//         ),
 
 // (Circular Avatar) Source code :
 
@@ -126,7 +160,6 @@ class MyApp extends StatelessWidget {
 // ],
 // ),
 
-
 // ( Container / Expanded / padding / Size Box) source code :
 
 // Center(
@@ -166,7 +199,6 @@ class MyApp extends StatelessWidget {
 // ),
 // ),
 
-
 // (Divider / CircleAvatar / Icon / SizedBox) source code :
 
 // Column(
@@ -198,3 +230,29 @@ class MyApp extends StatelessWidget {
 // )
 // ],
 // ),
+
+// (List Tile) source code:
+
+// ListTile(
+// leading: Icon(Icons.account_circle),
+// title: Text('Contact',style: TextStyle(fontSize: 20),),
+// subtitle: Text('Enter your Number',style: TextStyle(fontSize: 10),),
+// )
+
+
+// ListTile / ListViewBuilder source code: => Chat UI
+
+// Expanded(child: ListView.builder(
+// itemCount: 100,
+// itemBuilder: (context,index){
+// return const ListTile(
+// leading: CircleAvatar(
+// backgroundColor: Colors.black,
+// child: Icon(Icons.account_circle,color: Colors.white,),
+// ),
+// title: Text('Shayan Noor'),
+// subtitle: Text('Hi sanga ye..'),
+// trailing: Text('03:15 PM'),
+// );
+// },
+// ))
